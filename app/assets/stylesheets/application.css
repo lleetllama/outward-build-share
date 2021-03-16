@@ -5,13 +5,13 @@
   bottom: 0;
   width:  100%;
   color: #d79e68;
-  background-image: url("outward_tileable.jpg");
+  background-image: url("/assets/outward_tileable.jpg");
   border-top: 3px double #d79e68;
   font-style: italic;
 }
 
 .gui-element{
-	background-image: url("outward_tileable.jpg");
+	background-image: url("/assets/outward_tileable.jpg");
   border: 3px double #d79e68;
   font-style: italic;
 }
@@ -23,11 +23,11 @@
 
 .navbar{
 	border-bottom: 3px double #d79e68;
-  background-image: url("outward_tileable.jpg");
+  background-image: url("/assets/outward_tileable.jpg");
 }
 
 body{
-  background-image: url("outward-background.jpg");
+  background-image: url("/assets/outward-background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
