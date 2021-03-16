@@ -1,0 +1,42 @@
+# PostgreSQL. Versions 9.1 and up are supported.
+#
+# Install the pg driver:
+#   gem install pg
+# On OS X with Homebrew:
+#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+# On OS X with MacPorts:
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+# On Windows:
+#   gem install pg
+#       Choose the win32 build.
+#       Install PostgreSQL and put its /bin directory on your path.
+#
+# Configure Using Gemfile
+# gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: outward-build-share
+  pool: 5
+  username: build_dev
+  password: 3sbCR%pDqHvn34#
+  socket: /tmp/mysql.sock
+
+test:
+  <<: *default
+  database: outward-build-share_test
+
+production:
+  <<: *default
+  database: outward-build-share_production
+  username: outward-build-share
+  password: <%= ENV['OUTWARD-BUILD-SHARE_DATABASE_PASSWORD'] %>
