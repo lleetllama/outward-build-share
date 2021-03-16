@@ -7,9 +7,9 @@ ruby '2.6.6'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use postgresql as the database for Active Record
 
-gem 'mysql2', '~> 0.5.3'
+gem 'mysql2', '~> 0.5.3' # local development 
+gem 'pg', '>= 0.18', '< 2.0' # heroku production
 
-gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -24,16 +24,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise' 
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
